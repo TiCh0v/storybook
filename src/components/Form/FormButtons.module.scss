@@ -1,0 +1,58 @@
+/* FormWithButtons.module.scss */
+.formContainer {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .primaryButton {
+    padding: 10px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .primaryButton:hover {
+    background-color: #45a049;
+  }
+  
+  .secondaryButton {
+    padding: 10px;
+    background-color: #f44336;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .secondaryButton:hover {
+    background-color: #e53935;
+  }
+  
+  .successMessage {
+    margin-top: 20px;
+    color: green;
+  }
+  

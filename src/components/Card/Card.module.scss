@@ -1,0 +1,34 @@
+@use 'sass:color';
+
+
+@use '../../styles/_utils/palette';
+@use '../../styles/_utils/fonts';
+@use '../../styles/_utils/variables';
+@use '../../styles/_utils/transitions';
+
+.card {
+  @include fonts.heading-h3-bold;
+
+  height: 100%;
+  display: grid;
+  grid-template-rows: min-content min-content auto;
+  gap: 10px;
+  padding: 16px 16px 24px;
+
+  color: palette.$color-black;
+
+  background-color: palette.$color-white;
+  border-radius: variables.$double-border-radius;
+
+  box-shadow: 0 2px 4px 0 #0f0f0f17;
+
+  .muted {
+    @include fonts.body-b1-semibold;
+    color: palette.$text-dark-grey;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 4px 0 #0f0f0f30;
+    @include transitions.transition-all;
+  }
+}

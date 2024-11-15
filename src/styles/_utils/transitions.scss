@@ -1,0 +1,13 @@
+@use 'variables';
+
+@mixin transition-all($duration: variables.$transition-duration) {
+  transition: all ease-in-out $duration;
+}
+
+@mixin transition-fill($duration: variables.$transition-duration) {
+  transition: fill ease-in-out $duration;
+}
+
+@mixin transition-stroke($duration: variables.$transition-duration) {
+  transition: stroke ease-in-out $duration;
+}

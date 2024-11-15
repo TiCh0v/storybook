@@ -1,0 +1,22 @@
+@use '_utils/fonts';
+@use '_utils/palette';
+
+@mixin page-title() {
+  @include fonts.heading-h1-bold;
+
+  display: flex;
+
+  padding: 24px;
+
+  color: palette.$color-black;
+
+  background-color: white;
+  border-bottom: 1px solid palette.$secondary-grey;
+
+  .subtitle {
+    @include fonts.heading-h2-regular;
+
+    padding-left: 12px;
+    color: palette.$text-secondary;
+  }
+}

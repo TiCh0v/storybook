@@ -1,0 +1,34 @@
+@use '../_utils/palette';
+@use '../_utils/fonts';
+@use '../_utils/variables';
+
+.client-info {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 24px;
+  padding: 12px;
+
+  background-color: palette.$accent-light-blue;
+  border-radius: variables.$border-radius;
+
+  > div {
+    margin-right: 16px;
+  }
+
+  .name {
+    @include fonts.body-b1-medium;
+  }
+
+  .subscription-name {
+    @include fonts.body-b1-regular;
+
+    flex-grow: 1;
+  }
+
+  .expiry-date {
+    @include fonts.body-b2-regular;
+
+    color: palette.$text-dark-grey;
+  }
+}

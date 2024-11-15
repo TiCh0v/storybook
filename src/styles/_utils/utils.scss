@@ -1,0 +1,34 @@
+@use 'palette';
+
+@mixin ellipsis($line-clamp) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-clamp;
+}
+
+@mixin spinner {
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+
+  border: 7px solid palette.$primary-blue;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+
+  animation: rotation 1s linear infinite;
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

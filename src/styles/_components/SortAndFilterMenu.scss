@@ -1,0 +1,153 @@
+// @import "./palette";
+// @import "./dialogs";
+
+// .filters-select-main {
+//   .filters-select__control {
+//     background-color: transparent;
+//     border: none;
+
+//     .filters-control {
+//       cursor: pointer;
+
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+
+//       width: inherit;
+//       height: 2.5rem;
+//       padding: 0 1rem;
+
+//       font-size: 0.875rem;
+//       font-weight: 400;
+//       color: $text-primary;
+
+// background-color: $basic-white;
+// border: 1px solid $secondary-grey;
+// border-radius: 0.5rem;
+
+//       span {
+//         margin-left: 0.44rem;
+//         font-weight: 500;
+//       }
+
+//       svg {
+//         margin-right: 0.44rem;
+
+//         path {
+//           fill: $text-primary;
+//         }
+//       }
+
+//       &.withFilters svg {
+//         &:last-child {
+//           width: 1rem;
+//           height: 1rem;
+//           margin-right: 0;
+//           margin-left: 0.25rem;
+//         }
+//       }
+//     }
+
+//     &.filters-select__control--menu-is-open {
+//       .filters-control {
+//         color: $basic-white;
+//         background-color: $primary-blue-pressed;
+//         border: none;
+
+//         svg path {
+//           fill: $basic-white;
+//         }
+//       }
+//     }
+//   }
+
+//   .filters-select__group-heading {
+//     margin-bottom: 0.75rem;
+//     padding: 0;
+//   }
+
+//   .filters-select__menu {
+//     width: 17.5rem;
+//     padding: 0.75rem 1rem;
+//     border-radius: 0.5rem;
+//     box-shadow: 0 2px 7px 0 rgb(15 15 15 / 5%);
+
+//     .filters-select__menu-list {
+//       max-height: fit-content;
+//     }
+
+//     .sort-group {
+//       display: flex;
+//       flex-direction: column;
+//       font-size: 0.875rem;
+
+//       label {
+//         flex-grow: 1;
+//       }
+
+//       input {
+//         margin-left: 0.75rem;
+//       }
+
+//       .radio-option {
+//         display: flex;
+
+//         margin-bottom: 0.25rem;
+//         padding: 0.4rem 0.75rem;
+
+//         background-color: $secondary-light-grey;
+//         border-radius: 0.25rem;
+//       }
+//     }
+
+//     .filter-group {
+//       .input-checkbox {
+//         display: flex;
+
+//         margin-bottom: 0.25rem;
+//         padding: 0.4rem 0.75rem;
+
+//         background-color: $secondary-light-grey;
+//         border-radius: 0.25rem;
+
+//         input {
+//           margin: 0 0 0 0.75rem;
+//         }
+
+//         label {
+//           flex-grow: 1;
+//         }
+//       }
+//     }
+
+//     .filters-select__group-heading {
+//       display: flex;
+//       align-items: baseline;
+//       line-height: 1rem;
+
+//       .group-name {
+//         flex-grow: 1;
+//         letter-spacing: 0.0313rem;
+//       }
+
+//       .clear-filters {
+//         cursor: pointer;
+
+//         font-size: 0.875rem;
+//         font-weight: 600;
+//         color: $primary-blue;
+//         text-transform: none;
+//       }
+//     }
+
+//     .apply-filters {
+//       width: auto;
+//       height: 2rem;
+
+//       font-size: 0.875rem;
+//       color: $primary-blue;
+
+// background-color: $secondary-light-blue;
+// }
+// }
+// }

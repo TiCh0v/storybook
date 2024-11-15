@@ -1,0 +1,80 @@
+@use '_utils/palette';
+@use '_utils/fonts';
+@use '_utils/variables';
+@use '_utils/transitions';
+
+@mixin icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+
+  border-radius: 4px;
+  border: none;
+  outline: none;
+
+  background-color: palette.$accent-light-blue;
+
+  color: palette.$primary-blue;
+
+  &.no-display {
+    display: none;
+  }
+}
+
+@mixin button {
+  @include fonts.body-b1-semibold;
+  @include transitions.transition-all;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 40px;
+  padding: 8px 20px;
+
+  border: none;
+  border-radius: variables.$border-radius;
+  outline: none;
+
+  &.primary {
+    color: palette.$color-white;
+    background-color: palette.$primary-blue;
+
+    &:disabled {
+      background-color: palette.$secondary-dark-grey;
+    }
+  }
+
+  &.secondary {
+    color: palette.$primary-blue;
+    background-color: palette.$secondary-light-blue;
+
+    &:hover {
+      color: palette.$color-white;
+    }
+  }
+
+  &:hover {
+    background-color: palette.$primary-blue-hover;
+  }
+
+  &.no-display {
+    display: none;
+  }
+}
+
+// todo remove if unnecessary because of margin top
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 32px;
+}

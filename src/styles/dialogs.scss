@@ -1,0 +1,63 @@
+@use '_utils/palette';
+@use '_utils/fonts';
+@use '_utils/variables';
+@use '_utils/transitions';
+
+@mixin dialog-base {
+  width: 620px;
+  padding: 32px;
+  background-color: palette.$color-white;
+  border-radius: variables.$border-radius;
+}
+
+@mixin dialog-header {
+  @include fonts.heading-h1-bold;
+
+  margin-bottom: 32px;
+
+  .goBack {
+    @include fonts.body-b1-semibold;
+
+    color: palette.$primary-blue;
+    margin-bottom: 16px;
+
+    div {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+
+      @include transitions.transition-all;
+
+      svg {
+        margin-right: 3px;
+
+        path {
+          @include transitions.transition-fill;
+        }
+      }
+    }
+
+    &:hover {
+      div {
+        color: palette.$primary-blue-hover;
+
+        svg path {
+          fill: palette.$primary-blue-hover;
+        }
+      }
+    }
+  }
+}
+
+@mixin dialog-body {
+  margin: 24px 0;
+  font-size: 1.3125rem;
+  font-weight: 400;
+}
+
+@mixin buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 32px;
+}

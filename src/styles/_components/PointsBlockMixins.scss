@@ -1,0 +1,28 @@
+@use '../_utils/palette';
+@use '../_utils/fonts';
+
+@mixin points-block {
+  color: palette.$color-white;
+
+  .points {
+    position: relative;
+    display: flex;
+  }
+
+  .pointsBold {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .textSmall {
+    font-size: 12px;
+  }
+}

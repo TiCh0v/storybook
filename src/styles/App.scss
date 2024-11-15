@@ -1,0 +1,28 @@
+@use '_utils/palette';
+@use 'tags';
+@use '_utils/fonts';
+@use '_utils/utils';
+@use '_utils/transitions';
+
+#root {
+  height: 100%;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: 60px auto;
+  height: 100%;
+  background-color: palette.$background-color-secondary;
+
+  .spinner {
+    @include utils.spinner;
+  }
+}
+
+.p-dialog-header-icons {
+  @include transitions.transition-all;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

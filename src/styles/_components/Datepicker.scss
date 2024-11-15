@@ -1,0 +1,176 @@
+@use '../_utils/palette';
+@use '../_utils/variables';
+@use '../_utils/shadows';
+@use '../_utils/fonts';
+@use '../_utils/transitions';
+
+@mixin base {
+  min-width: 280px;
+  min-height: 260px;
+
+  background-color: palette.$color-white;
+  border-radius: variables.$border-radius;
+
+  @include shadows.overlay;
+
+  [class~='p-datepicker-group-container'] {
+    [class~='p-datepicker-group'] {
+      border-radius: variables.$border-radius;
+
+      .highlighted {
+        color: palette.$primary-blue-pressed;
+      }
+
+      .disabled {
+        color: palette.$text-medium-grey;
+      }
+
+      [class~='p-datepicker-header'] {
+        height: 40px;
+        border-bottom: 1px solid palette.$secondary-grey;
+
+        [class~='p-datepicker-title'] {
+          display: flex;
+          gap: 12px;
+        }
+
+        [class~='p-datepicker-month'],
+        [class~='p-datepicker-year'] {
+          @include fonts.body-b1-medium;
+          @include transitions.transition-all;
+
+          &:hover {
+            color: palette.$primary-blue-hover;
+          }
+        }
+
+        [class~='p-datepicker-prev'],
+        [class~='p-datepicker-next'] {
+          margin: 0 12px;
+          background-color: transparent;
+          border: none;
+
+          svg path {
+            fill: palette.$primary-blue;
+
+            @include transitions.transition-fill;
+          }
+
+          &:hover {
+            svg path {
+              fill: palette.$primary-blue-hover;
+            }
+          }
+        }
+      }
+
+      [class~='p-datepicker-calendar-container'] {
+        table {
+          border-collapse: separate;
+          border-spacing: 6px;
+
+          td span {
+            border-radius: variables.$border-radius;
+
+            @include transitions.transition-all;
+
+            div {
+              @include transitions.transition-all;
+            }
+
+            &:hover {
+              color: palette.$color-white;
+              background-color: palette.$primary-blue-hover;
+
+              div {
+                color: palette.$color-white;
+              }
+            }
+          }
+
+          & [class~='p-datepicker-today'] span {
+            background-color: palette.$accent-light-blue;
+          }
+        }
+
+        padding: 0 12px 8px;
+
+        [class~='p-datepicker-calendar'] {
+          thead {
+            color: palette.$text-dark-grey;
+
+            th {
+              padding: 0.7rem 0.3rem;
+              font-weight: 400;
+              text-transform: lowercase;
+            }
+
+            th:nth-last-of-type(-n + 2) {
+              color: palette.$primary-blue;
+            }
+          }
+
+          tbody {
+            td {
+              font-size: 12px;
+
+              span {
+                padding: 6px;
+              }
+
+              [data-p-disabled='true']:not([data-p-highlight='true']) {
+                color: palette.$text-dark-grey;
+              }
+            }
+
+            span:has(> div.highlighted) {
+              border-collapse: separate;
+              border: 1px solid palette.$primary-blue-pressed;
+              border-radius: variables.$border-radius;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin input {
+  [class~='p-inputtext'] {
+    @include fonts.body-b1-regular;
+
+    width: 100%;
+    height: 36px;
+    padding: 9px 12px;
+
+    background-color: palette.$background-color-secondary;
+    border: 1px solid palette.$secondary-grey;
+    border-radius: 4px;
+
+    @include transitions.transition-all;
+
+    &:hover {
+      border-color: palette.$primary-blue-hover;
+    }
+
+    &[aria-expanded='true'] {
+      border-color: palette.$primary-blue-pressed;
+    }
+  }
+}
+
+@mixin inputRelative {
+  position: relative;
+  display: grid;
+  gap: 8px;
+
+  svg {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+
+    path {
+      fill: palette.$primary-blue;
+    }
+  }
+}

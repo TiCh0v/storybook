@@ -1,0 +1,43 @@
+@use '_utils/palette';
+@use '_utils/fonts';
+@use '_utils/transitions';
+
+.tag {
+  @include fonts.body-b1-regular;
+  @include transitions.transition-all;
+
+  cursor: default;
+
+  min-width: fit-content;
+  max-width: fit-content;
+  height: max-content;
+  margin-right: 0;
+  padding: 3px 8px;
+
+  border-radius: 4px;
+}
+
+.primary {
+  color: palette.$primary-blue;
+  background-color: palette.$secondary-light-blue;
+}
+
+.secondary {
+  color: palette.$text-dark-grey;
+  background-color: palette.$secondary-grey;
+}
+
+.success {
+  color: palette.$accent-green;
+  background-color: palette.$accent-light-green;
+}
+
+.warning {
+  color: palette.$accent-orange;
+  background-color: palette.$accent-light-orange;
+}
+
+.danger {
+  color: palette.$accent-red;
+  background-color: palette.$accent-light-red;
+}

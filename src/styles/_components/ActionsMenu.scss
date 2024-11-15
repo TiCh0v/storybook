@@ -1,0 +1,61 @@
+@use '../_utils/fonts';
+@use '../_utils/palette';
+@use '../_utils/transitions';
+
+@mixin item {
+  @include fonts.body-b1-regular;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 7px 12px;
+
+  background-color: palette.$secondary-light-grey;
+  border-radius: 4px;
+
+  @include transitions.transition-all;
+
+  &:hover {
+    background-color: palette.$secondary-dark-grey;
+    color: palette.$color-white;
+
+    svg {
+      path,
+      rect {
+        fill: palette.$secondary-light-grey;
+      }
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: auto;
+    margin-left: 8px;
+
+    path,
+    rect {
+      @include transitions.transition-fill;
+
+      fill: palette.$secondary-dark-grey;
+    }
+  }
+}
+
+.timetable,
+.trash,
+.whatsapp {
+  svg path {
+    @include transitions.transition-stroke;
+
+    stroke: palette.$secondary-dark-grey;
+  }
+
+  &:hover {
+    svg path {
+      stroke: palette.$secondary-light-grey;
+    }
+  }
+}

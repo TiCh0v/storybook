@@ -1,0 +1,11 @@
+@use '../../../../styles/tags';
+
+.badge {
+  display: flex;
+  align-self: end;
+
+  width: fit-content;
+  padding: 3px 8px;
+
+  border-radius: 4px;
+}
